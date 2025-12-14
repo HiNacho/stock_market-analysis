@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import joblib
 import os
-
 def load_data():
     return pd.read_csv("data/stock_data.csv")
 
