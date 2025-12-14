@@ -13,62 +13,9 @@
 	<i>Modern, interactive, and fully reproducible ML pipeline + web app.</i>
 </p>
 
-</div>
+## 📄 License
 
----
-
-## 🚀 Project Overview
-
-This project is a full-stack machine learning pipeline and web application for predicting the next-day closing price of stocks. It features:
-
-- **Automated data cleaning & feature engineering**
-- **Time-series aware ML models** (Linear Regression, Random Forest, XGBoost, etc.)
-- **Interactive Streamlit dashboard** for company selection and prediction
-- **Beautiful UI & visualizations**
-- **Reproducible, modular codebase**
-
----
-
-## 🛠️ Tech Stack & Tools
-
-- <img src="https://img.icons8.com/color/48/python.png" width="24"/> **Python 3.9+**
-- <img src="https://img.icons8.com/color/48/pandas.png" width="24"/> **Pandas**
-- <img src="https://img.icons8.com/color/48/scikit-learn.png" width="24"/> **scikit-learn**
-- <img src="https://img.icons8.com/color/48/artificial-intelligence.png" width="24"/> **XGBoost**
-- <img src="https://img.icons8.com/color/48/streamlit.png" width="24"/> **Streamlit**
-- <img src="https://img.icons8.com/color/48/docker.png" width="24"/> **Docker**
-
----
-
-## 📦 Project Structure
-
-```
-project/
-│
-├── data/
-│   └── stock_data.csv
-├── models/
-│   └── best_model.pkl
-├── backend/
-├── pages/
-├── app.py
-├── requirements.txt
-└── ...
-```
-
----
-
-## ✨ Features
-
-- **Upload & clean stock data**
-- **Feature engineering** (lags, rolling stats, returns, etc.)
-- **Time-based train-test split** (no leakage!)
-- **Multiple regression models**
-- **Model evaluation & selection**
-- **Next-day close prediction**
-- **Interactive Streamlit UI**
-- **Line charts & visualizations**
-
+MIT License
 ---
 
 ## 🖥️ How to Run
