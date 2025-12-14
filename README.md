@@ -1,34 +1,109 @@
 <div align="center">
 
-<img src="https://img.icons8.com/color/96/stock-market.png" width="80" style="margin:0 10px;"/>
-<img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="80" style="margin:0 10px;"/>
-<img src="https://img.icons8.com/color/96/python.png" width="80" style="margin:0 10px;"/>
-<img src="https://img.icons8.com/color/96/pandas.png" width="80" style="margin:0 10px;"/>
-<img src="https://img.icons8.com/color/96/streamlit.png" width="80" style="margin:0 10px;"/>
-<img src="https://img.icons8.com/color/96/docker.png" width="80" style="margin:0 10px;"/>
+<img src="https://img.icons8.com/color/96/stock-market.png" width="80"/>
+<img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="80"/>
+<img src="https://img.icons8.com/color/96/python.png" width="80"/>
+<img src="https://img.icons8.com/color/96/pandas.png" width="80"/>
+<img src="https://img.icons8.com/color/96/streamlit.png" width="80"/>
+<img src="https://img.icons8.com/color/96/docker.png" width="80"/>
 
-<h1>📈 Stock Market Closing Price Predictor</h1>
-<p>
-	<b>Forecast tomorrow's closing price for any company on the exchange!</b><br>
-	<i>Modern, interactive, and fully reproducible ML pipeline + web app.</i>
-</p>
+# 📈 Stock Market Closing Price Predictor
 
-## 📄 License
+**Forecast tomorrow's closing price for any company on the exchange!**  
+<i>Modern, interactive, and fully reproducible ML pipeline + web app.</i>
 
-MIT License
+</div>
+
+---
+
+## 🚀 Overview
+
+This project is a full-stack machine learning pipeline and web application for predicting the next-day closing price of stocks. It features:
+
+- Automated data cleaning & feature engineering
+- Time-series aware ML models (Linear Regression, Random Forest, Prophet, etc.)
+- Interactive Streamlit dashboard for company selection and prediction
+- Beautiful UI & visualizations
+- Modular, reproducible codebase
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python 3.9+**
+- **Pandas**
+- **scikit-learn**
+- **Prophet**
+- **Plotly**
+- **pdfplumber**
+- **SQLAlchemy**
+- **Streamlit**
+- **Docker**
+
+---
+
+## 📦 Project Structure
+
+```
+project/
+│
+├── app.py                  # Main Streamlit app
+├── requirements.txt        # Python dependencies
+├── Dockerfile              # Docker support
+├── backend/
+│   ├── db/                 # Database models and schema
+│   ├── etl/                # Data extraction, cleaning, loading
+│   └── ml/                 # ML models and utilities
+├── data/                   # Raw and processed data
+├── models/                 # Trained model artifacts
+├── pages/                  # Streamlit multipage scripts
+├── tests/                  # Unit tests
+└── README.md
+```
+
+---
+
+## ✨ Features
+
+- **Upload & clean stock data from PDF**
+- **Feature engineering** (lags, rolling stats, returns, etc.)
+- **Time-based train-test split** (no leakage!)
+- **Multiple regression models**
+- **Model evaluation & selection**
+- **Next-day close prediction**
+- **Interactive Streamlit UI**
+- **Line charts & visualizations**
+- **Database integration for persistent storage**
+
 ---
 
 ## 🖥️ How to Run
 
-1. **Clone the repo**
-2. **Install dependencies**
-	 ```bash
-	 pip install -r requirements.txt
-	 ```
-3. **Run the app**
-	 ```bash
-	 streamlit run app.py
-	 ```
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the app
+
+```bash
+streamlit run app.py
+```
+
+### 4. (Optional) Run with Docker
+
+```bash
+docker build -t stock-predictor .
+docker run -p 8501:8501 stock-predictor
+```
 
 ---
 
@@ -38,9 +113,20 @@ MIT License
 
 ---
 
-## 🤝 Contributing
+## 🧪 Testing
 
-Pull requests and suggestions are welcome! For major changes, please open an issue first.
+Run all tests with:
+
+```bash
+pytest
+```
+
+---
+
+## ⚙️ Configuration
+
+- Environment variables (see `.env.example` or set `DATABASE_URL`)
+- All configuration is handled via `app.py` and Streamlit sidebar
 
 ---
 
@@ -60,44 +146,3 @@ MIT License
 	<br><br>
 	<b>Made with ❤️ for the future of finance!</b>
 </div>
-│   ├── 3_predictions.py
-│   └── 4_data_explorer.py
-├── backend/
-│   ├── etl/
-│   │   ├── pdf_extractor.py
-│   │   ├── data_cleaner.py
-│   │   └── loader.py
-│   ├── db/
-│   │   ├── models.py
-│   │   ├── schema.sql
-│   │   └── db.py
-│   ├── ml/
-│   │   ├── prophet_model.py
-│   │   └── lstm_model.py
-│   └── api.py
-├── tests/
-│   ├── test_pdf_extraction.py
-│   ├── test_data_cleaning.py
-│   ├── test_db_loading.py
-│   └── test_model_training.py
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-├── .github/workflows/ci.yml
-└── README.md
-```
-
-## Environment Variables
-- `DATABASE_URL` (default: sqlite:///stock-app.db)
-
-## System Dependencies
-
-
-## Acceptance Checklist
-- [ ] Upload PDF, preview, save to DB
-- [ ] Company analysis and charts
-- [ ] Prophet forecast and metrics
-- [ ] All tests pass
-- [ ] Docker Compose up: app + Postgres
-
----
