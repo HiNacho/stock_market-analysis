@@ -144,7 +144,7 @@ MIT License
 - `DATABASE_URL` (default: sqlite:///stock-app.db)
 
 ## System Dependencies
-- Camelot: Requires Ghostscript (`brew install ghostscript` on macOS)
+
 
 ## Acceptance Checklist
 - [ ] Upload PDF, preview, save to DB
